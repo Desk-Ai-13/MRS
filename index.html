@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por confirmar</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Georgia', serif;
+            color: #333;
+        }
+
+        /* Fondo de pantalla completo - Imagen suave para bautizo */
+        .background {
+            background: url('./img/Fondo.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Overlay suave para legibilidad */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.65);
+        }
+
+        /* Contenedor principal con animación */
+        .container {
+            position: relative;
+            text-align: center;
+            max-width: 90%;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* Inicialmente invisible para la animación */
+            animation: fadeInUp 1.5s ease-out forwards; /* Animación suave */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Marco ovalado para la foto */
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Texto principal */
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Texto discreto inferior derecha */
+        .footer-text {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+            .container {
+                padding: 30px 20px;
+            }
+            .footer-text {
+                font-size: 0.8rem;
+                bottom: 10px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="overlay"></div>
+        <div class="container">
+            <!-- Cambia la URL por la foto de la pareja o familia -->
+            <div class="photo-frame">
+                <img src="./img/Foto2.jpeg" alt="Foto">
+            </div>
+            <h1>¡Muchas gracias por confirmar tu asistencia!</h1>
+            <p>Nos hace muy felices saber que nos acompañarás en este día tan especial.<br>
+            ¡Te esperamos con mucho cariño!</p>
+            <div class="footer-text">Adultos (2)</div>
+        </div>
+    </div>
+</body>
+</html>
